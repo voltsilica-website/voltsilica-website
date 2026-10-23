@@ -5,100 +5,344 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Workshop Registration | VOLTSILICA TECHNOLOGIES</title>
+<title>VOLTSILICA TECHNOLOGIES | Learn. Design. Innovate.</title>
+<meta name="description" content="VOLTSILICA TECHNOLOGIES offers practical workshops in VLSI, Physical Design, Embedded Systems and IoT. Explore workshops and verify certificates.">
 
 <style>
+:root {
+  --navy: #071c3d;
+  --blue: #087bdc;
+  --darkblue: #0b3269;
+  --light: #f1f6fc;
+  --white: #ffffff;
+  --text: #1b304c;
+  --muted: #637890;
+}
+
 * { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f0f5fc;
-  color: #19334f;
+  color: var(--text);
+  background: var(--white);
   line-height: 1.6;
+}
+
+a { text-decoration: none; }
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 header {
   background: white;
-  padding: 17px 7%;
-  border-bottom: 1px solid #dde8f5;
+  border-bottom: 1px solid #e3e9f1;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-header img {
-  width: 205px;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 16px 0;
+}
+
+.logo {
+  width: 200px;
   max-width: 100%;
   height: auto;
 }
 
-.wrapper {
-  max-width: 950px;
-  margin: 70px auto;
-  padding: 20px;
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 23px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+.nav-links a:hover { color: var(--blue); }
+
+.nav-links .nav-register {
+  background: var(--blue);
+  color: white;
+  padding: 10px 17px;
+  border-radius: 8px;
+}
+
+.hero {
+  min-height: 530px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    radial-gradient(circle at 85% 30%, #1571bc80, transparent 35%),
+    linear-gradient(125deg, #061731, #103e7e);
+}
+
+.hero-content { padding: 85px 0; }
+
+.tagline {
+  color: #8fd4ff;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.hero h1 {
+  font-size: clamp(37px, 6vw, 68px);
+  line-height: 1.13;
+  max-width: 790px;
+  margin: 18px 0;
+}
+
+.hero p {
+  color: #daeaff;
+  font-size: 18px;
+  max-width: 660px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 9px;
+  padding: 14px 22px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #1494ef;
+  color: white;
+}
+
+.btn-outline {
+  border: 1px solid #96b8dd;
+  color: white;
+  background: transparent;
+}
+
+section { padding: 75px 0; scroll-margin-top: 90px; }
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  max-width: 750px;
+  margin: auto;
+}
+
+.light-section { background: var(--light); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .card {
   background: white;
-  padding: 45px;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e2eaf5;
+  box-shadow: 0 6px 25px #123b6d0c;
+}
+
+.card-icon {
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  background: #e9f4ff;
+  color: #086ab9;
+  font-size: 25px;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: var(--navy);
+  font-size: 21px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.about h2 { font-size: 35px; color: var(--navy); }
+
+.about p { color: var(--muted); }
+
+.about-visual {
+  background: linear-gradient(135deg, #082957, #1476c7);
   border-radius: 20px;
-  box-shadow: 0 10px 35px #143f6b15;
-  border: 1px solid #dde8f5;
-}
-
-.eyebrow {
-  color: #0879d7;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-h1 {
-  color: #092956;
-  font-size: clamp(30px, 5vw, 45px);
-  line-height: 1.2;
-}
-
-p { color: #5d7188; }
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 15px 24px;
-  background: #087bdc;
+  padding: 55px 30px;
   color: white;
-  border-radius: 9px;
+  text-align: center;
+}
+
+.about-visual h3 {
+  color: white;
+  font-size: 28px;
+}
+
+.about-visual p { color: #d8ecff; }
+
+.workshop-banner {
+  background: linear-gradient(120deg, #071d40, #0c4992);
+  color: white;
+  padding: 45px;
+  border-radius: 19px;
+  text-align: center;
+}
+
+.workshop-banner h3 {
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+.workshop-banner p {
+  max-width: 750px;
+  margin: 0 auto 23px;
+  color: #d8eaff;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.step {
+  background: white;
+  border: 1px solid #e2eaf5;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.step-number {
+  color: var(--blue);
   font-weight: bold;
-  text-decoration: none;
+  font-size: 27px;
 }
 
-.btn:hover { background: #075eae; }
-
-.back {
-  display: inline-block;
-  color: #0872c8;
-  text-decoration: none;
-  margin-bottom: 20px;
+.verify-box {
+  max-width: 750px;
+  margin: auto;
+  padding: 35px;
+  border-radius: 17px;
+  background: white;
+  border: 1px solid #dfebf8;
+  box-shadow: 0 8px 25px #09295710;
 }
 
-.info {
-  margin-top: 28px;
-  background: #edf5ff;
-  border-radius: 11px;
-  padding: 18px 23px;
+.verify-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.info li { margin: 9px 0; }
+.verify-box input {
+  width: 100%;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 9px;
+  border: 1px solid #afc5dd;
+}
+
+.verify-box button {
+  margin-top: 15px;
+  background: var(--blue);
+  color: white;
+}
+
+.note {
+  font-size: 13px;
+  color: var(--muted);
+}
 
 footer {
+  background: #061832;
+  color: #d8e3f2;
+  padding: 45px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+footer h3 { color: white; }
+
+footer a {
+  color: #cfe3ff;
+  display: block;
+  margin: 8px 0;
+}
+
+.copyright {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid #ffffff22;
   text-align: center;
-  padding: 24px;
-  color: #72839b;
   font-size: 13px;
 }
 
-@media(max-width:600px) {
-  .wrapper { margin: 25px auto; }
-  .card { padding: 27px 20px; }
+@media (max-width: 850px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links { gap: 13px; }
+
+  .grid, .steps, .about, .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero { min-height: 430px; }
+
+  section { padding: 55px 0; }
+
+  .workshop-banner { padding: 30px 20px; }
 }
 </style>
 </head>
@@ -106,84 +350,404 @@ footer {
 <body>
 
 <header>
-  <a href="index.html">
-    <img src="logo.png"
-         alt="VOLTSILICA TECHNOLOGIES">
-  </a>
-</header>
-
-<main class="wrapper">
-
-  <a href="index.html" class="back">
-    ← Back to Homepage
-  </a>
-
-  <div class="card">
-
-    <div class="eyebrow">
-      Student Workshop Portal
-    </div>
-
-    <h1>Workshop Registration</h1>
-
-    <p>
-      Welcome to the VOLTSILICA TECHNOLOGIES
-      Student Workshop Registration Portal.
-    </p>
-
-    <p>
-      Check available workshops, event dates,
-      registration deadlines and available
-      seats before submitting your application.
-    </p>
-
-    <a
-      href="https://script.google.com/macros/s/AKfycbxtYyDaRq9DbXX9k1f-mX3dCX2Xt0IfyV99vuwsUlicSArc8OWxoF6XcSxem6KhNZTt/exec"
-      class="btn"
-      rel="noopener noreferrer">
-      View Workshops & Register →
+  <div class="container navbar">
+    <a href="#home">
+      <img src="logo.png"
+           class="logo"
+           alt="VOLTSILICA TECHNOLOGIES">
     </a>
 
-    <div class="info">
-      <strong>Registration Information</strong>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#verify">Verify</a>
+      <a class="nav-register"
+         href="register.html">Register Now</a>
+    </nav>
+  </div>
+</header>
 
-      <ul>
-        <li>
-          Only eligible OPEN workshops
-          accept registrations.
-        </li>
+<main>
 
-        <li>
-          Registration may close automatically
-          when the deadline expires.
-        </li>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="tagline">
+      SEMICONDUCTOR • ELECTRONICS • TECHNOLOGY
+    </div>
 
-        <li>
-          Seat availability may be limited.
-        </li>
+    <h1>Learn. Design.<br>Innovate.</h1>
 
-        <li>
-          Successful submissions receive
-          a unique Registration ID.
-        </li>
+    <p>
+      Empowering engineering students with practical
+      knowledge in VLSI, semiconductor technologies,
+      embedded systems and IoT.
+    </p>
 
-        <li>
-          Registration does not guarantee
-          workshop admission.
-        </li>
-      </ul>
+    <div class="buttons">
+      <a href="register.html"
+         class="btn btn-primary">
+         Explore Workshops →
+      </a>
+
+      <a href="#programs"
+         class="btn btn-outline">
+         Our Programs
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div>
+      <h2>About VOLTSILICA TECHNOLOGIES</h2>
+
+      <p>
+        VOLTSILICA TECHNOLOGIES focuses on
+        practical engineering education and
+        industry-oriented technical skill development.
+      </p>
+
+      <p>
+        Our training areas include semiconductor
+        fundamentals, VLSI Physical Design,
+        embedded systems, electronics, IoT
+        and hardware project development.
+      </p>
+
+      <p>
+        We aim to connect classroom concepts with
+        practical tools and hands-on learning
+        through technical workshops and
+        structured training activities.
+      </p>
+    </div>
+
+    <div class="about-visual">
+      <div style="font-size:65px">⚙</div>
+      <h3>From Concepts to Circuits</h3>
+      <p>
+        Practical learning • Technical workshops
+        • Engineering projects
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="programs" class="light-section">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Our Training Programs</h2>
+      <p>
+        Explore technical fields through
+        hands-on workshops and learning activities.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-icon">⚙</div>
+        <h3>VLSI Physical Design</h3>
+        <p>
+          Digital design fundamentals,
+          floorplanning, placement,
+          clock tree synthesis, routing
+          and semiconductor design flow.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">◈</div>
+        <h3>Embedded Systems</h3>
+        <p>
+          Microcontrollers, Arduino,
+          Raspberry Pi, sensor interfacing
+          and practical embedded development.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">⌁</div>
+        <h3>IoT & Robotics</h3>
+        <p>
+          Internet-connected devices,
+          sensors, communication systems
+          and prototype development.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">⌘</div>
+        <h3>Digital Electronics</h3>
+        <p>
+          Logic gates, sequential circuits,
+          digital systems and electronic
+          design fundamentals.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">▣</div>
+        <h3>Engineering Projects</h3>
+        <p>
+          Guided practical sessions,
+          hardware implementation,
+          testing and project demonstrations.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">✦</div>
+        <h3>Technical Workshops</h3>
+        <p>
+          College workshops and focused
+          skill-development sessions
+          across electronics and VLSI topics.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="workshops">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Upcoming Workshops</h2>
+      <p>
+        Workshop dates, registration deadlines,
+        available seats and registration status
+        are maintained in our workshop portal.
+      </p>
+    </div>
+
+    <div class="workshop-banner">
+      <h3>Build Skills Through Practical Learning</h3>
+
+      <p>
+        View published workshops and check
+        whether registration is OPEN, CLOSED
+        or FULL before applying.
+      </p>
+
+      <a href="register.html"
+         class="btn btn-primary">
+         View Workshops & Register →
+      </a>
     </div>
 
   </div>
+</section>
+
+<section class="light-section">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>How Registration Works</h2>
+      <p>
+        A simple process for students
+        interested in our technical workshops.
+      </p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Choose a Workshop</h3>
+        <p>
+          Open the workshop portal and
+          check its dates and availability.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Submit Registration</h3>
+        <p>
+          Register for an eligible workshop
+          using the student registration form.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Receive Registration ID</h3>
+        <p>
+          After successful submission,
+          receive a unique registration ID.
+          Admission remains subject to review.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="verify">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Certificate Verification</h2>
+      <p>
+        Verify certificates issued by
+        VOLTSILICA TECHNOLOGIES.
+      </p>
+    </div>
+
+    <div class="verify-box">
+      <form id="verifyForm">
+
+        <label for="token">
+          Certificate Verification Token
+        </label>
+
+        <input
+          type="text"
+          id="token"
+          maxlength="32"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Enter 32-character token"
+          required
+        >
+
+        <button class="btn" type="submit">
+          Verify Certificate →
+        </button>
+
+        <p id="verifyMessage"
+           class="note"
+           role="status"></p>
+
+      </form>
+
+      <p class="note">
+        You can also scan the QR code on
+        your certificate. Certificate ID
+        and verification token are different.
+      </p>
+
+      <p class="note">
+        Verification confirms an institute-issued
+        training record. It does not imply
+        government accreditation.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="light-section">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Collaborate With VOLTSILICA</h2>
+      <p>
+        Technical workshops, college learning
+        sessions and practical training activities.
+      </p>
+    </div>
+
+    <div class="workshop-banner">
+      <h3>Interested in Our Programs?</h3>
+
+      <p>
+        Explore available workshops.
+        Official contact details and
+        additional inquiry channels
+        will be published here.
+      </p>
+
+      <a href="register.html"
+         class="btn btn-primary">
+         Explore Registrations →
+      </a>
+    </div>
+
+  </div>
+</section>
+
 </main>
+
 <footer>
-  © <span id="year"></span>
-  VOLTSILICA TECHNOLOGIES
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>VOLTSILICA TECHNOLOGIES</h3>
+        <p>
+          Semiconductor, electronics and
+          technology skill development.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="register.html">Workshop Registration</a>
+        <a href="#verify">Certificate Verification</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span>
+      VOLTSILICA TECHNOLOGIES.
+      All rights reserved.
+    </div>
+
+  </div>
 </footer>
 
 <script>
+const VERIFY_WEB_APP =
+  "https://script.google.com/macros/s/AKfycbwx1snXI8BSvaHTmRopPWi6vCKnhiGhmrEcc0x_T7kT-KM9ltwvgOLjB_xyU5H4pTUhRg/exec";
+
 document.getElementById("year").textContent =
   new Date().getFullYear();
+
+const verifyForm =
+  document.getElementById("verifyForm");
+
+const tokenInput =
+  document.getElementById("token");
+
+const verifyMessage =
+  document.getElementById("verifyMessage");
+
+const incomingToken =
+  new URLSearchParams(window.location.search)
+  .get("token");
+
+if (incomingToken &&
+    /^[a-f0-9]{32}$/i.test(incomingToken)) {
+  tokenInput.value = incomingToken;
+}
+
+verifyForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const token = tokenInput.value.trim();
+
+  if (!/^[a-f0-9]{32}$/i.test(token)) {
+    verifyMessage.textContent =
+      "Please enter a valid 32-character verification token.";
+    return;
+  }
+
+  const url = new URL(VERIFY_WEB_APP);
+  url.searchParams.set("token", token);
+
+  window.location.href = url.toString();
+});
 </script>
 
 </body>
