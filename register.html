@@ -2,78 +2,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Workshop Registration | VOLTSILICA</title>
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #eef4fc;
-      color: #142b49;
-    }
+<title>Workshop Registration | VOLTSILICA TECHNOLOGIES</title>
 
-    .container {
-      max-width: 850px;
-      margin: 75px auto;
-      padding: 45px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 35px rgba(0,0,0,.08);
-    }
+<style>
+* { box-sizing: border-box; }
 
-    h1 { color: #082e60; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f5fc;
+  color: #19334f;
+  line-height: 1.6;
+}
 
-    p { line-height: 1.7; color: #536984; }
+header {
+  background: white;
+  padding: 17px 7%;
+  border-bottom: 1px solid #dde8f5;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 16px 28px;
-      margin-top: 20px;
-      color: white;
-      background: #126ed0;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header img {
+  width: 205px;
+  max-width: 100%;
+  height: auto;
+}
 
-    .btn:hover { background: #084a98; }
+.wrapper {
+  max-width: 950px;
+  margin: 70px auto;
+  padding: 20px;
+}
 
-    @media(max-width:600px) {
-      .container { margin: 30px 15px; padding: 25px; }
-    }
-  </style>
+.card {
+  background: white;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px #143f6b15;
+  border: 1px solid #dde8f5;
+}
+
+.eyebrow {
+  color: #0879d7;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  color: #092956;
+  font-size: clamp(30px, 5vw, 45px);
+  line-height: 1.2;
+}
+
+p { color: #5d7188; }
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 24px;
+  background: #087bdc;
+  color: white;
+  border-radius: 9px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover { background: #075eae; }
+
+.back {
+  display: inline-block;
+  color: #0872c8;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.info {
+  margin-top: 28px;
+  background: #edf5ff;
+  border-radius: 11px;
+  padding: 18px 23px;
+}
+
+.info li { margin: 9px 0; }
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #72839b;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  .wrapper { margin: 25px auto; }
+  .card { padding: 27px 20px; }
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <a href="index.html">← Back to VOLTSILICA</a>
 
-    <h1>Student Workshop Registration</h1>
+<header>
+  <a href="index.html">
+    <img src="logo.png"
+         alt="VOLTSILICA TECHNOLOGIES">
+  </a>
+</header>
+
+<main class="wrapper">
+
+  <a href="index.html" class="back">
+    ← Back to Homepage
+  </a>
+
+  <div class="card">
+
+    <div class="eyebrow">
+      Student Workshop Portal
+    </div>
+
+    <h1>Workshop Registration</h1>
 
     <p>
-      Register for VOLTSILICA TECHNOLOGIES workshops
-      in VLSI, Physical Design, Embedded Systems,
-      IoT and Electronics.
+      Welcome to the VOLTSILICA TECHNOLOGIES
+      Student Workshop Registration Portal.
     </p>
 
     <p>
-      Click below to open our official registration form.
-      After successful submission, you will receive a
-      unique Registration ID.
+      Check available workshops, event dates,
+      registration deadlines and available
+      seats before submitting your application.
     </p>
 
-    <a class="btn"
-       href="https://script.google.com/macros/s/AKfycbxtYyDaRq9DbXX9k1f-mX3dCX2Xt0IfyV99vuwsUlicSArc8OWxoF6XcSxem6KhNZTt/exec"
-       rel="noopener noreferrer">
-       Register Now →
+    <a
+      href="https://script.google.com/macros/s/AKfycbxtYyDaRq9DbXX9k1f-mX3dCX2Xt0IfyV99vuwsUlicSArc8OWxoF6XcSxem6KhNZTt/exec"
+      class="btn"
+      rel="noopener noreferrer">
+      View Workshops & Register →
     </a>
 
-    <p>
-      Registration is subject to organizer review.
-      Submitting this form does not guarantee admission.
-    </p>
+    <div class="info">
+      <strong>Registration Information</strong>
+
+      <ul>
+        <li>
+          Only eligible OPEN workshops
+          accept registrations.
+        </li>
+
+        <li>
+          Registration may close automatically
+          when the deadline expires.
+        </li>
+
+        <li>
+          Seat availability may be limited.
+        </li>
+
+        <li>
+          Successful submissions receive
+          a unique Registration ID.
+        </li>
+
+        <li>
+          Registration does not guarantee
+          workshop admission.
+        </li>
+      </ul>
+    </div>
+
   </div>
+</main>
+
+<footer>
+  © <span id="year"></span>
+  VOLTSILICA TECHNOLOGIES
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
 </body>
 </html>
