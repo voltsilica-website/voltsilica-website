@@ -354,6 +354,113 @@ footer a {
 
   .workshop-banner { padding: 30px 20px; }
 }
+  
+/* VOLTSILICA Professional Header V4 */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e9f3;
+  box-shadow: 0 3px 15px rgba(7,31,67,0.05);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 10px 0;
+  min-height: 82px;
+}
+
+.logo {
+  display: block;
+  width: 165px;
+  max-width: 100%;
+  height: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 19px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: #071f43;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #0879d7;
+}
+
+.links .btn {
+  background: #0879d7;
+  color: white !important;
+  padding: 11px 17px;
+  border-radius: 9px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid #dce7f3;
+  background: white;
+  color: #071f43;
+  padding: 9px 12px;
+  border-radius: 9px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 70px;
+  }
+
+  .logo {
+    width: 145px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  .links a {
+    display: block;
+    padding: 12px 10px;
+    border-bottom: 1px solid #edf2f8;
+  }
+
+  .links .btn {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
 </style>
 </head>
 
